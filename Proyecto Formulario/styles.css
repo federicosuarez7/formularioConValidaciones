@@ -1,0 +1,71 @@
+/* 
+    -Normalizamos texto, margenes y relleno. 
+    -Coloreamos el fondo
+    -Centramos los elementos del form.
+*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(247, 247, 236);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+/* 
+    -Damos color al fondo.
+    -Manejamos los rellenos internos, redondeamos bordes.
+    -Damos sombra a la caja.
+*/
+#registroForm{
+    background-color: rgb(233, 244, 248);
+    padding:0px 25px 30px 25px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-top: 2%;
+    box-shadow: 2px 2px 8px;
+}
+/* Separamos el texto de la casilla para completar.*/
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+/* Hacemos que los checkboxes esten en la misma linea */
+label.inline{
+    display: inline-block;
+}
+/* Agrandamos los input de alto */
+input{
+    padding: 4px 0px 4px 0px; 
+}
+/* Hacemos que la caja de texto ocupe el 100% de ancho */
+input[type="text"],
+input[type="number"],
+input[type="email"],select{
+    width: 100%;
+}
+input:focus{
+    background-color: rgb(243, 167, 167);
+}
+select:focus{
+    background-color: rgb(243, 167, 167);
+}
+/* Configuramos el boton de enviar */
+input[type="submit"]{
+    background-color: rgb(64, 64, 138);
+    color:white;
+    padding: 10px 0px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: .5s ease;
+}
+input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+/* Configuramos el msj de error */
+.error{
+    color: red;
+    font-size: 10px;
+}
