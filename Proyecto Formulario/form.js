@@ -1,7 +1,20 @@
 const submitFunction = (event) => {
     // Este metodo previene que al hacer click en submit no haga su funcion predefinida el boton
-    event.preventDefault();
-    validarFormulario();
+    if (!validarFormulario()) {
+        event.preventDefault();
+    }else{
+        event.preventDefault();
+        alert(
+            'Los datos enviados fueron: '+ '\n' +
+            'Nombre: '+document.getElementById('nombre').value + '\n'+
+            'Apellido: '+document.getElementById('apellido').value + '\n'+
+            'Edad: '+document.getElementById('edad').value + '\n'+
+            'Documento: '+document.getElementById('documento').value + '\n'+
+            'Email: '+document.getElementById('email').value + '\n'+
+            'Actividad: '+document.getElementById('actividad').value + '\n'+
+            'Nivel de estudios: '+document.getElementById('nivelEstudio').value + '\n'
+        );
+    }
 }
 
 // Esta funcion cuando haya un error se mostrara el msj de error como un elemento de bloque
